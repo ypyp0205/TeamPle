@@ -56,11 +56,12 @@ public class PartnerCompanyDao {
     	
         if (partnerCompanys.size() != 0) {
         	System.out.println("                        ▼");
+        	System.out.println("                        ▼");
             System.out.println("                        ▼");
         	System.out.println("=================================================");
         	System.out.println("                 < 등록된 출판사 목록 >");
         	System.out.println("=================================================");
-            System.out.println("회사이름\t담당자번호\t담당자 이름\t출판도서\t");
+            System.out.printf("회사이름" + "\t" + "담당자번호" + "  \t" + "담당자이름" + " \t" +  "     출판도서");
             for (int i = 0; i < partnerCompanys.size(); i++) {
                 if (partnerCompanys.get(i).getAgentName().equals("") || partnerCompanys.get(i).getDirectorName().equals("") || partnerCompanys.get(i).getDirectPhoneNumber().equals("")) {
                     updatePartnerInfo();
@@ -69,8 +70,8 @@ public class PartnerCompanyDao {
                     
                     
             for (PartnerCompanyVO vo : partnerCompanys) {
-            	
-            	System.out.println(vo.getCompanyName() + "\t" + vo.getDirectPhoneNumber() + "\t" + vo.getDirectorName() + "\t" + vo.getPublishingBook());
+            	System.out.println();
+            	System.out.println(vo.getCompanyName() + "\t" + vo.getDirectPhoneNumber() + "  \t" + vo.getDirectorName() + "    \t" + "   " + vo.getPublishingBook());
             }
         } else {
             System.out.println("출판사 목록없음");

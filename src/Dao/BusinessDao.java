@@ -20,6 +20,7 @@ public class BusinessDao {
         BusinessVO businessVO=new BusinessVO();
         System.out.println("                        ▼");
         System.out.println("                        ▼");
+        System.out.println("                        ▼");
         System.out.println("=================================================");
         System.out.println("                 < 출판사에 도서 주문 >");
         System.out.println("=================================================");
@@ -71,9 +72,10 @@ public class BusinessDao {
     }
     public void showTradeHistory(){
     	System.out.println("                        ▼");
+    	System.out.println("                        ▼");
         System.out.println("                        ▼");
     	System.out.println("=================================================");
-    	System.out.println("                  < 도서 거래내역 >");
+    	System.out.println("                  < 출판사별 거래내역 >");
     	System.out.println("=================================================");
         System.out.println("책이름\t수량\t출판사이름\t주문일");
 

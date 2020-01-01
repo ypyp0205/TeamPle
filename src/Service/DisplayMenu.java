@@ -20,6 +20,9 @@ public class DisplayMenu {
 
     //시작메뉴
     public void defaultMenu() {
+		System.out.println("                        ▼");
+	    System.out.println("                        ▼");
+	    System.out.println("                        ▼");
     	printStream.println("=================================================");
         printStream.println("                   < 책조24 >");
         printStream.println("=================================================");
@@ -84,27 +87,27 @@ public class DisplayMenu {
         Scanner scanner = new Scanner(System.in);
         String selectedNum;
         while (true) {
-        	printStream.println("=================================================");
-        	System.out.println("                        ■");
-        	System.out.println("                        ■");
-        	System.out.println("                      ▼ ■ ▼");
-            System.out.println("                        ▼");
+        	
+        	
+        	printStream.println("                        ▼");
+        	printStream.println("                        ▼");
+        	printStream.println("                        ▼");
         	printStream.println("=================================================");
             printStream.println("                   < 회원 메뉴 >");
             printStream.println("=================================================");
-            printStream.println("1.도서검색");
-            printStream.println("2.베스트셀러 보러가기");
-            printStream.println("3.장바구니로 가기 ");
-            printStream.println("4.구매내역보기 ");
-            printStream.println("5.평점 입력 하기");
+            printStream.println("1.베스트셀러 TOP10");
+            printStream.println("2.도서 정보 검색");
+            printStream.println("3.도서 구매  ");
+            printStream.println("4.최근 구매내역 ");
+            printStream.println("5.도서 평점 주기");
             printStream.println("6.마이페이지");
             printStream.println("0.뒤로가기");
             System.out.print("번호를 입력해주세요 >");
             selectedNum = scanner.nextLine();
             if (selectedNum.equals("1")) {
-                bookSeviceImpl.searchBook();
-            } else if (selectedNum.equals("2")) {
                 bookSeviceImpl.showBestSeller();
+            } else if (selectedNum.equals("2")) {
+            	bookSeviceImpl.searchBook();
             } else if (selectedNum.equals("3")) {
                 bookShoppingBasketServiceImpl.bookShoppingBasketMenu();
             } else if (selectedNum.equals("4")) {
@@ -138,6 +141,7 @@ public class DisplayMenu {
         String selectedNum;
         while (true) {
         	System.out.println("                        ▼");
+        	System.out.println("                        ▼");
             System.out.println("                        ▼");
         	printStream.println("=================================================");
         	printStream.println("                   < 관리자 메뉴 >");
@@ -145,7 +149,7 @@ public class DisplayMenu {
             printStream.println("1.신규도서 및 출판사 정보등록");
             printStream.println("2.출판사에 도서 주문");
             printStream.println("3.출판사별 거래 내역");
-            printStream.println("4.출판사 목록");
+            printStream.println("4.등록된 출판사 목록");
             printStream.println("5.회원 목록보기 ");
             printStream.println("6.회원 삭제하기 ");
             printStream.println("0.로그아웃");

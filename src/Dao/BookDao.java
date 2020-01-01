@@ -70,6 +70,7 @@ public class BookDao {
         Scanner scanner = new Scanner(System.in);
         System.out.println("                        ▼");
         System.out.println("                        ▼");
+        System.out.println("                        ▼");
         System.out.println("=================================================");
         System.out.println("                  < 도서 정보 등록 >");
         System.out.println("=================================================");
@@ -94,6 +95,7 @@ public class BookDao {
         
         System.out.print("가격 : ");
         price = Integer.parseInt(scanner.nextLine());
+        System.out.println("                        ▼");
         System.out.println("                        ▼");
         System.out.println("                        ▼");
         System.out.println("=================================================");
@@ -133,6 +135,13 @@ public class BookDao {
 
     public void searchBook() {            //도서검색
 
+        System.out.println("                        ▼");
+        System.out.println("                        ▼");
+        System.out.println("                        ▼");
+        System.out.println("=================================================");
+        System.out.println("                    < 도서 검색 >");
+        System.out.println("=================================================");
+        
         Scanner s = new Scanner(System.in);
         System.out.println("검색어를 입력해주세요 > ");
         String userSearch = s.nextLine();
@@ -143,13 +152,8 @@ public class BookDao {
         boolean b4 = false;
         int noSearch = 0;
 
-        System.out.print("\"" + userSearch + "\"" + "으로 ");
  
-        System.out.println("                        ▼");
-        System.out.println("                        ▼");
-        System.out.println("=================================================");
-        System.out.println("                    < 도서정보 >");
-        System.out.println("=================================================");
+        System.out.print("\"" + userSearch + "\"" + "으로 ");
         System.out.println("검색하신 결과입니다.");
         for (int i = 0; i < BookList.size(); i++) {
             b1 = BookList.get(i).getCategoryName().toLowerCase().replace(" ", "").contains(userSearch.replace(" ", "").toLowerCase());
@@ -185,7 +189,7 @@ public class BookDao {
     public StringBuilder usingSearchForBookShoppingBasket() {        
         StringBuilder stringBuilder = new StringBuilder();
         Scanner s = new Scanner(System.in);
-        System.out.println("검색어를 입력해주세요 > ");
+        System.out.print("검색어를 입력해주세요 > ");
         String userSearch = s.nextLine();
         int count = 0;
         boolean b2 = false;
@@ -238,8 +242,9 @@ public class BookDao {
                 int bookInsert;
                 System.out.println("                        ▼");
                 System.out.println("                        ▼");
+                System.out.println("                        ▼");
                 System.out.println("=================================================");
-                System.out.println("                 < 거래처에 도서 주문 >");
+                System.out.println("                 < 출판사에 도서 주문 >");
                 System.out.println("=================================================");
                 System.out.println("<" + BookDao.BookList.get(i).getName() + ">" + " 도서를 주문할 수량을 입력해주세요.");
                 bookInsert = Integer.parseInt(scanner.nextLine());
@@ -270,6 +275,7 @@ public class BookDao {
         }
         System.out.println("                        ▼");
         System.out.println("                        ▼");
+        System.out.println("                        ▼");
         System.out.println("=================================================");
     	System.out.println("               < 베스트셀러 카테고리 검색>");
     	System.out.println("=================================================");
@@ -284,6 +290,7 @@ public class BookDao {
 
         for (int i = 0; i < BookList.size(); i++) {
             if (BookList.get(i).getCategoryName().equals(catergoryName)) {
+            	System.out.println("                        ▼");
             	System.out.println("                        ▼");
                 System.out.println("                        ▼");
             	System.out.println("=================================================");
@@ -311,7 +318,7 @@ public class BookDao {
 		int score;
         String comment;
         boolean b = true;
-   
+        System.out.println("                        ▼");
         System.out.println("                        ▼");
         System.out.println("                        ▼");
         System.out.println("=================================================");

@@ -14,6 +14,8 @@ public class LoginDao {
 
 
     	//아이디와 패스워드를 입력받음
+          
+        	System.out.println("                        ▼");
         	System.out.println("                        ▼");
         	System.out.println("                        ▼");
         	System.out.println("=================================================");

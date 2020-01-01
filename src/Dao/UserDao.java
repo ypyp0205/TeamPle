@@ -64,6 +64,7 @@ public class UserDao {
 
     public void userList() {
     	System.out.println("                        ▼");
+    	System.out.println("                        ▼");
         System.out.println("                        ▼");
     	System.out.println("=================================================");
     	System.out.println("                   < 회원 목록 >");
@@ -94,6 +95,7 @@ public class UserDao {
         String answer;
         for (int i = 0; i < userList.size(); i++) {
             if (LoginDao.loginSessionVO.getId().equals(userList.get(i).getId())) {
+            	System.out.println("                        ▼");
             	System.out.println("                        ▼");
                 System.out.println("                        ▼");
             	System.out.println("=================================================");

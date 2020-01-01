@@ -44,8 +44,11 @@ public class UserServieImpl implements  UserService {
     @Override
     public void deleteUser() {
     	//회원삭제  remove()
+    	System.out.println("                        ▼");
+    	System.out.println("                        ▼");
+    	System.out.println("                        ▼");
     	System.out.println("=================================================");
-    	System.out.println("                    < 회원 삭제 >");
+    	System.out.println("                   < 회원 삭제 >");
     	System.out.println("=================================================");
     	Scanner s = new Scanner(System.in);
     	System.out.println("삭제할 아이디 : ");

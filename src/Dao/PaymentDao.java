@@ -9,6 +9,7 @@ import VO.PayVO;
 
 
 
+
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -32,6 +33,13 @@ public class PaymentDao {
         int priceSum = 0;
         String bnm = "";
 
+        System.out.println("                        ▼");
+        System.out.println("                        ▼");
+        System.out.println("                        ▼");
+        System.out.println("=================================================");
+        System.out.println("                   < 결제 1단계>");
+        System.out.println("=================================================");
+       
 
         if(BookShoppingBasketDao.bookShoppingBasket.size() == 0) {
             System.out.println("장바구니가 비었습니다.");
@@ -98,6 +106,8 @@ public class PaymentDao {
                                 System.out.println("보유중인 포인트 : " + userDao.userList.get(k).getPoint());
                                 System.out.println("포인트를 얼마 사용하시겠습니까?");
                                 point = Integer.parseInt(s.nextLine());
+                                
+                                
 
                                 if(point > userDao.userList.get(k).getPoint()) {
                                     System.out.println("보유하신 포인트가 부족합니다");
@@ -120,7 +130,12 @@ public class PaymentDao {
             	}
         	}
 
-            System.out.println("===============================");
+            System.out.println("                        ▼");
+            System.out.println("                        ▼");
+            System.out.println("                        ▼");
+            System.out.println("=================================================");
+            System.out.println("                   < 결제 2단계 >");
+            System.out.println("=================================================");
             System.out.println("주문 금액 :  " + priceSum + "원");
             System.out.println("사용포인트 : -" + point + "포인트 ");
             System.out.println("총 결제 금액은 " + (priceSum-point) + "원 입니다.");
@@ -128,6 +143,12 @@ public class PaymentDao {
             System.out.println("결제 하시겠습니까? (y/n)");
             String payInput="";
             payInput = s.nextLine();
+            System.out.println("                        ▼");
+            System.out.println("                        ▼");
+            System.out.println("                        ▼");
+            System.out.println("=================================================");
+            System.out.println("                   < 결제 완료 >");
+            System.out.println("=================================================");
 
             if(payInput.equals("n")) {
                 BookShoppingBasketServiceImpl bsbs = new BookShoppingBasketServiceImpl();
@@ -135,7 +156,7 @@ public class PaymentDao {
             }
 
 
-            System.out.println("===============================");
+         
             System.out.println("구매 완료되었습니다.");
             System.out.println(addPoint + "포인트 적립되었습니다.");
 
