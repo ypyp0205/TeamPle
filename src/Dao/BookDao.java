@@ -251,9 +251,10 @@ public class BookDao {
                 Date today = new Date();
                 SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
                 String regDate = simpleDateFormat.format(today);
-                BookDao.BookList.get(i).setStock(bookInsert);
+                
                 businessDao.addTrade(BookDao.BookList.get(i).getName(), BookDao.BookList.get(i).getPublishCompanyName(), bookInsert, regDate);
                 System.out.println("해당 출판사에 주문완료");
+                
 
             	
             }
@@ -270,39 +271,30 @@ public class BookDao {
         ArrayList<BookVO> bestSellerList = new ArrayList<>();
 
         String catergoryName;
-        for (BookVO bookVO : BookList) {
-            System.out.println(bookVO.getCategoryName() + "\t");
-        }
+        
         System.out.println("                        ▼");
         System.out.println("                        ▼");
         System.out.println("                        ▼");
         System.out.println("=================================================");
-    	System.out.println("               < 베스트셀러 카테고리 검색>");
+    	System.out.println("               < 베스트셀러 TOP 10>");
     	System.out.println("=================================================");
-        System.out.print("카테고리를 입력해주세요 : ");
-        catergoryName = scanner.nextLine();
+        
+       
 
-        for (int i = 0; i < BookList.size(); i++) {
-            if (BookList.get(i).getCategoryName().equals(catergoryName)) {
-                Collections.sort(BookList);
-            }
-        }
+      
+              
+     
 
+    	
         for (int i = 0; i < BookList.size(); i++) {
-            if (BookList.get(i).getCategoryName().equals(catergoryName)) {
-            	System.out.println("                        ▼");
-            	System.out.println("                        ▼");
-                System.out.println("                        ▼");
-            	System.out.println("=================================================");
-            	System.out.println("                 < 베스트셀러 목록 >");
-            	System.out.println("=================================================");
+            
                 System.out.println("카테고리 : " + BookList.get(i).getCategoryName());
                 System.out.println("책이름 : " + BookList.get(i).getName());
                 System.out.println("작가 : " + BookList.get(i).getAuthorName());
                 System.out.println("판매량 : " + BookList.get(i).getSalePoint());
                 System.out.println("평점 : " + BookList.get(i).getScore());
-
-            }
+                System.out.println("=================================================");
+            
         }
     }
 

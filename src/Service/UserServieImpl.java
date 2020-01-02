@@ -17,15 +17,15 @@ public class UserServieImpl implements  UserService {
     	//회원가입
     	
     	Scanner s = new Scanner(System.in);
-    	System.out.println("아이디 : ");
+    	System.out.print("아이디 : ");
     	String id = s.nextLine();
-    	System.out.println("비밀번호 : ");
+    	System.out.print("비밀번호 : ");
     	String password = s.nextLine();
-    	System.out.println("이름 : ");
+    	System.out.print("이름 : ");
     	String name = s.nextLine();
-    	System.out.println("주소 : ");
+    	System.out.print("주소 : ");
     	String address = s.nextLine();
-    	System.out.println("전화번호 : ");
+    	System.out.print("전화번호 : ");
     	String phonNumber = s.nextLine();
     	
     	UserVO user = new UserVO(); //user 객체 생성해서 VO에 등록

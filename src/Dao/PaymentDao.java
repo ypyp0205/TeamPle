@@ -174,9 +174,15 @@ public class PaymentDao {
 
         int price = 0;
 
+        System.out.println("                        ▼");
+        System.out.println("                        ▼");
+        System.out.println("                        ▼");
+        System.out.println("=================================================");
+        System.out.println("                 < 최근 구매 내역 >");
+        
         for (int i = 0; i < payList.size(); i++) {
             if (LoginDao.loginSessionVO.getId().equals(payList.get(i).getPayUserId())) {
-            	System.out.println("===============================");
+            	System.out.println("=================================================");
                 System.out.println("결제일 : " + payList.get(i).getRegDate());
                 System.out.println("아이디 : " + payList.get(i).getPayUserId());
                 System.out.println("배송지 : " + payList.get(i).getPayUserAdd());
@@ -188,7 +194,8 @@ public class PaymentDao {
                 price += payList.get(i).getPayPrice();
 
             }
-        }System.out.println("===============================");
+        }
+        System.out.println("=================================================");
         System.out.println("총 결제 금액 : "+price);
     }
 

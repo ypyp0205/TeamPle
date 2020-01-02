@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.Scanner;
 
 import Service.DisplayMenu;
+import Service.UserService;
+import Service.UserServieImpl;
 import VO.UserVO;
 
 public class UserDao {
@@ -70,11 +72,32 @@ public class UserDao {
     	System.out.println("                   < 회원 목록 >");
     	System.out.println("=================================================");
         System.out.println("아이디 \t" + "이름\t" + "주소\t" + "전화번호\t" + "포인트\t" + "분류");
+       
         for (int i = 0; i < userList.size(); i++) {
             System.out.println(userList.get(i).getId() + "\t" + userList.get(i).getName() + "\t" +
                     userList.get(i).getAddress() + "\t" + userList.get(i).getPhonNumber()
                     + "\t" + userList.get(i).getPoint() + "\t" + userList.get(i).getRoll());
         }
+        
+      
+        System.out.println("삭제할 회원이 있나요? (y/n)");
+        Scanner s = new Scanner(System.in);
+        String a = s.nextLine();
+        UserServieImpl us = new UserServieImpl();
+        
+        if ("y".equals(a)){
+        	us.deleteUser();
+        	
+		}else if("n".equals(a)){
+			
+		}
+      
+            
+            
+            
+            
+            
+            
 
     }
 
@@ -115,19 +138,19 @@ public class UserDao {
                 System.out.println("수정하시겠습니까? (y/n)");
                 answer = s.nextLine();
                 if (answer.toLowerCase().equals("y")) {
-                    System.out.println("수정할 정보의 번호를 입력해주세요");
+                    System.out.print("수정할 정보의 번호를 입력해주세요 >");
                     int menu = Integer.parseInt(s.nextLine());
                     String revise = "";
                     switch (menu) {
                         case 1:
                             do {
-                                System.out.println("기존 비밀번호 : ");
+                                System.out.print("기존 비밀번호 : ");
                                 revise = s.nextLine();
                                 if (!a.equals(revise)) {
-                                    System.out.println("비밀번호가 다릅니다.");
+                                    System.out.print("비밀번호가 다릅니다.");
                                 }
                             } while (!a.equals(revise));
-                            System.out.println("새로운 비밀번호 : ");
+                            System.out.print("새로운 비밀번호 : ");
                             revise = s.nextLine();
                             userList.get(i).setPassword(revise);
                             break;

@@ -75,7 +75,7 @@ public class BusinessDao {
     	System.out.println("                        ▼");
         System.out.println("                        ▼");
     	System.out.println("=================================================");
-    	System.out.println("                  < 출판사별 거래내역 >");
+    	System.out.println("                 < 최근 거래 내역 >");
     	System.out.println("=================================================");
         System.out.println("책이름\t수량\t출판사이름\t주문일");
 

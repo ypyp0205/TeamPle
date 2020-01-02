@@ -26,8 +26,8 @@ public class DisplayMenu {
     	printStream.println("=================================================");
         printStream.println("                   < 책조24 >");
         printStream.println("=================================================");
-        printStream.println("1.도서검색");
-        printStream.println("2.베스트 셀러 목록");
+        printStream.println("1.도서정보검색");
+        printStream.println("2.베스트셀러 TOP 10");
         printStream.println("3.로그인");
         printStream.println("4.회원가입");
         printStream.println("0.종료");
@@ -95,26 +95,26 @@ public class DisplayMenu {
         	printStream.println("=================================================");
             printStream.println("                   < 회원 메뉴 >");
             printStream.println("=================================================");
-            printStream.println("1.베스트셀러 TOP10");
-            printStream.println("2.도서 정보 검색");
-            printStream.println("3.도서 구매  ");
-            printStream.println("4.최근 구매내역 ");
-            printStream.println("5.도서 평점 주기");
-            printStream.println("6.마이페이지");
-            printStream.println("0.뒤로가기");
+            printStream.println("1.베스트셀러 TOP 10");
+           // printStream.println("2.도서 정보 검색");
+            printStream.println("2.쇼핑하러가기  ");
+            printStream.println("3.최근 구매내역 ");
+            printStream.println("4.도서 평점 주기");
+            printStream.println("5.마이페이지");
+            printStream.println("0.로그아웃");
             System.out.print("번호를 입력해주세요 >");
             selectedNum = scanner.nextLine();
             if (selectedNum.equals("1")) {
                 bookSeviceImpl.showBestSeller();
-            } else if (selectedNum.equals("2")) {
+            }/* else if (selectedNum.equals("2")) {
             	bookSeviceImpl.searchBook();
-            } else if (selectedNum.equals("3")) {
+            } */else if (selectedNum.equals("2")) {
                 bookShoppingBasketServiceImpl.bookShoppingBasketMenu();
-            } else if (selectedNum.equals("4")) {
+            } else if (selectedNum.equals("3")) {
                 paymentServiceImpl.payList();
-            } else if (selectedNum.equals("5")) {
+            } else if (selectedNum.equals("4")) {
                 bookSeviceImpl.userRating();
-            } else if (selectedNum.equals("6")) {
+            } else if (selectedNum.equals("5")) {
                 userServieImpl.myPage();
             } else if (selectedNum.equals("0")) {
                  printStream.println("로그아웃 되었습니다. 첫 페이지로 돌아갑니다.");
@@ -148,10 +148,10 @@ public class DisplayMenu {
         	printStream.println("=================================================");
             printStream.println("1.신규도서 및 출판사 정보등록");
             printStream.println("2.출판사에 도서 주문");
-            printStream.println("3.출판사별 거래 내역");
+            printStream.println("3.최근 거래 내역");
             printStream.println("4.등록된 출판사 목록");
             printStream.println("5.회원 목록보기 ");
-            printStream.println("6.회원 삭제하기 ");
+            
             printStream.println("0.로그아웃");
             System.out.print("번호를 입력해주세요 >");
             selectedNum = scanner.nextLine();
@@ -165,9 +165,7 @@ public class DisplayMenu {
                 partnerCompanyManagementServiceImpl.getPartnerList();
             } else if (selectedNum.equals("5")) {
                 userServieImpl.ListUser();
-            }else if (selectedNum.equals("6")) {
-                userServieImpl.deleteUser();;
-            }   else if (selectedNum.equals("0")) {
+            } else if (selectedNum.equals("0")) {
                 LoginDao.loginSessionVO=null;
                 defaultMenu();
                 break;
